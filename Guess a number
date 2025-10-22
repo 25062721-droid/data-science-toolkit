@@ -1,0 +1,15 @@
+import random
+number = random.randint(1, 100)
+attempts = 0
+while attempts < 10:
+guess = int(input("Guess a number between 1-100："))
+attempts += 1
+if guess < number:
+print("Too small！")
+elif guess > number:
+print("Too big！")
+else:
+print(f"Cingratulation！You got it in{attempts}times！")
+break
+if attempts == 10:
+print(f"You have use up all the chances，the correct number is{number}")
